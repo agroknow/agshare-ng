@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>agShare</title>
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="js/selectivizr-min.js"></script>
+		<![endif]-->
+		
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+		<link rel="stylesheet" href="style/reset.css" />
+		
+		<!-- more css -->
+		<link rel="stylesheet" href="style/select2.css" />
+		
+		<link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/skin.css" />
+		<!--[if !IE 7]>
+			<style type="text/css">
+				#wrap {display:table;height:100%}
+			</style>
+		<![endif]-->
+		<script src="js/modernizr-1.7.min.js"></script>
+	
+	</head>
+	
+	<body>
+		<div id="wrap">
+
+			<div id="main">
+				<header>
+                    <!--<aside id="panel" class="clearfix">
+						<section class="clearfix">
+							<article class="clearfix">
+								<h3>Text Size</h3>
+								<div id="resizefonts"></div>
+								<span id="resizefonts_amount" class="amount"></span>
+							</article>
+							<article class="clearfix">
+								<h3>Line Spacing</h3>
+								<div id="linespacing"></div>
+								<span id="linespacing_amount" class="amount"></span>
+							</article>
+							<label>
+								<span>Font Type</span>
+								<select id="font-selector">
+									<option value="arial">Arial</option>
+									<option value="tahoma">Tahoma</option>
+									<option value="helvetica">Helvtica</option>
+								</select>
+							</label>
+						</section>
+						<div class="brownline"></div>
+						<a href="#" id="paneltrigger" class="floatright">panel</a>
+					</aside>-->
+					
+                    
+                    <div id="exousia-page-background-glare">
+                        <div id="exousia-page-background-glare-image">
+                            <a id="Header_health_link" href="index.html" style="display: inline-block; margin-left: 120px; margin-top: 16px; height: 76px; width: 384px; float: left; text-decoration: none;">&nbsp;</a>
+                            <a id="Header_oer_link" href="http://www.msu.edu/" style="display: inline-block; float: right; margin-right: 15px; height: 60px; width: 161px; text-decoration: none;">&nbsp;</a>
+                            <a id="Header_oer_link" href="http://www.oerafrica.org/" style="display: inline-block; float: right; margin-right:5px; height: 60px; width: 161px; text-decoration: none;">&nbsp;</a>
+                        </div>
+                    </div>
+                    <div id="exousia-page-background-glare">
+                        <div id="exousia-page-background-glare-image">
+                            <a id="Header_health_link" href="http://www.oerafrica.org/agshare/AgShareNew/tabid/1990/Default.aspx" style="display: inline-block; margin-left: 120px; margin-top: 16px; height: 76px; width: 384px; float: left; text-decoration: none;">&nbsp;</a>
+                            <a id="Header_oer_link" href="http://www.msu.edu/" style="display: inline-block; float: right; margin-right: 15px; height: 60px; width: 161px; text-decoration: none;">&nbsp;</a>
+                            <a id="Header_oer_link" href="http://www.oerafrica.org/" style="display: inline-block; float: right; margin-right:5px; height: 60px; width: 161px; text-decoration: none;">&nbsp;</a>
+                        </div>
+                    </div>
+                    
+				</header>
+                <div class="exousia-header">
+                    <div class="exousia-header-clip">
+                        <div class="exousia-header-center">
+                            <div class="exousia-header-jpeg">
+                                <ul class="exousia-hmenu">
+                                    <li style="border-right: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF"><a href="index.html"><span class="l"></span><span class="r"></span><span class="t">Home</span></a></li><li class="exousia-hmenu-li-separator"><span class="exousia-hmenu-separator"> </span></li>
+                                    <li style="border-right: 1px solid #FFFFFF;"><a href="http://www.oerafrica.org/agshare/AgShareResources/tabid/1405/Default.aspx"><span class="l"></span><span class="r"></span><span class="t">Find OER</span></a></li><li class="exousia-hmenu-li-separator"><span class="exousia-hmenu-separator"> </span></li>
+                                    <li style="border-right: 1px solid #FFFFFF;"><a href="http://www.oerafrica.org/agshare/Background/tabid/1992/Default.aspx"><span class="l"></span><span class="r"></span><span class="t">Project Background</span></a></li><li class="exousia-hmenu-li-separator"><span class="exousia-hmenu-separator"> </span></li>
+                                    <li style="border-right: 1px solid #FFFFFF;"><a href="http://www.oerafrica.org/agshare/Team/tabid/1993/Default.aspx"><span class="l"></span><span class="r"></span><span class="t">Project Team</span></a></li><li class="exousia-hmenu-li-separator"><span class="exousia-hmenu-separator"> </span></li>
+                                    <li style="border-right: 1px solid #FFFFFF;"><a href="http://www.oerafrica.org/agshare/Institutions/tabid/1994/Default.aspx"><span class="l"></span><span class="r"></span><span class="t">Partner Institutions</span></a></li><li class="exousia-hmenu-li-separator"><span class="exousia-hmenu-separator"> </span></li>
+                                    <li style="border-right: 1px solid #FFFFFF;"><a href="http://www.oerafrica.org/agshare/Information/tabid/1995/Default.aspx"><span class="l"></span><span class="r"></span><span class="t">Get Information</span></a></li><li class="exousia-hmenu-li-separator"><span class="exousia-hmenu-separator"> </span></li>
+                                    <li style="border-right: 1px solid #FFFFFF;"><a href="http://www.oerafrica.org/agshare/Contact/tabid/1996/Default.aspx"><span class="l"></span><span class="r"></span><span class="t">Contact Us</span></a></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+				<div class="main_body frontpage">
+					<!--<aside class="floatleft">
+						<section class="hasshadow">
+							left
+						</section>
+					</aside>-->
+					<div class="inner">
+						<div class="alignright">
+							<select id="lang-selector">
+								<option value="en">English</option>
+								<option value="fr">French</option>
+								<option value="sp">Spanish</option>
+								<option value="gr">Greek</option>
+							</select>
+						</div>
+						<section class="search aligncenter">
+							<div>
+                                <form action="listing.html" method="get">
+                                    <div>
+                                        <input class="search" id="mainsearch" type="text" name="query" class="withplaceholder" placeholder="Search..." />
+                                    </div>
+                                    <!--<input type="" value="submit" class="search" id="mainsearch"/>-->
+                                </form>
+								<!--<input type="text" class="search" id="mainsearch" />-->
+							</div>
+						</section>
+						<section class="icons_nav">
+							<h2 class="aligncenter">Featured Sections</h2>
+							<nav class="aligncenter">
+								<a href="listing.html?query=*&lrt=course" class="s0"><span>Training modules</span></a>
+								<a href="listing.html?query=*&lrt=guide" class="s1"><span>Supplementary material</span></a>
+								<a href="listing.html?query=*&lrt=broadcast" class="s2"><span>YouTube Videos</span></a>
+								<a href="listing.html?query=*&lrt=case study" class="s3"><span>Studies</span></a>
+							</nav>
+						</section>
+						<section class="modlist clearfix">
+							
+							<h3 class="withlogo">Latest Resources</h3>
+							
+							<article class="movie">
+								<h3><a href="item.html?id=3393">Gapminder Agriculture Start</a></h3>
+								<p>Gapminder Agriculture is a collection of 700 indicators from the Food and Agriculture Organization (FAO)</p>
+								<nav>
+									<label>Keywords:</label>
+									<a href="listing.html?query=greenoer">greenoer</a>
+									<a href="#">agriculture,</a>
+									<a href="#">Productivity,</a>
+									<a href="#">Income</a>
+								</nav>
+							</article>
+							
+							<article class="movie">
+								<h3><a href="item.html?id=3621">A Journey to USA</a></h3>
+								<p>Join students at the Dunbar School in Little Rock, Arkansas as they learn about compost and healthy gardening practices.</p>
+								<nav>
+									<label>Keywords:</label>
+									<a href="#">worms,</a>
+									<a href="#">animals,</a>
+									<a href="#">recycling,</a>
+									<a href="#">gardening</a>
+								</nav>
+							</article>
+							
+							<article class="movie">
+								<h3><a href="item.html?id=16450">Teachers Talk About the Use of Popular Media Resources in Teaching</a></h3>
+                                   <p>This YouTube resource is the 1st track/ part 1 of a recorded video tape. Teachers talk about the use of popular media resources in teaching.</p>
+								<nav>
+									<label>Keywords:</label>
+									<a href="#">education mass media</a>
+								</nav>
+							</article>
+							
+							<article class="movie">
+								<h3><a href="item.html?id=16460">Taking Account of Traditional Ways of Learning in Africa</a></h3>
+								<p>A video about how to take account of traditional ways of learning in Africa. Creating people centered shools.</p>
+								<nav>
+									<label>Keywords:</label>
+									<a href="#">learning methods</a>
+								</nav>
+							</article>
+							
+						</section>
+					</div>
+					
+				</div>
+				
+				<section class="credits">
+					<div class="inner">
+						<nav class="clearfix">
+							<a href="#" class="clnet">Powered by</a>
+							<a href="#" class="agroknow">A data pool curated and maintained by</a>
+							<a href="#" class="redpanda">Designed by</a>
+						</nav>
+					</div>
+				</section>
+			</div>
+		
+		</div>
+		
+		<footer id="mainfooter">
+        <div id="mainfooter">
+            <div class="inner">
+            <table cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                <tbody><tr>
+                    <td class="ContentBottom" align="center" height="40" width="100%" valign="top">
+                        <table width="958" height="40" align="center" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;" valign="top">
+                            <tbody><tr>
+                                <td class="Statements" width="149" valign="middle" style="padding-top:16px;"><br>
+                                    <a href="http://www.saide.org.za/" target="_blank"><img src="images/Saidelogo.gif" width="149" height="69" border="0"></a>
+                                </td>
+                                <td class="Statements" width="857" style="padding-left: 8px;"><br>
+                                    <div align="left"><a href="index.html">Home</a>&nbsp;|&nbsp; <a href="http://www.oerafrica.org/aboutoer/AboutUs/tabid/113/Default.aspx"> About Us</a>&nbsp;|&nbsp; <a href="http://www.oerafrica.org/aboutoer/Disclaimer/tabid/258/Default.aspx">Disclaimer</a>&nbsp;|&nbsp; <a href="http://www.oerafrica.org/aboutoer/LicensingConditions/tabid/260/Default.aspx">Licensing Conditions</a>&nbsp;|&nbsp; <a href="http://www.oerafrica.org/aboutoer/TermsConditions/tabid/989/Default.aspx">Terms &amp; Conditions</a>&nbsp;|&nbsp; <a href="http://www.oerafrica.org/aboutoer/ContactUs/tabid/257/Default.aspx">Contact Us</a>&nbsp;|&nbsp; <a href="http://www.oerafrica.org/aboutoer/Feedback/tabid/990/Default.aspx">Feedback</a>&nbsp;|&nbsp;<a id="dnn_dnnLogin_cmdLogin" class="linksignin" href="javascript:__doPostBack('dnn$dnnLogin$cmdLogin','')">&nbsp;Sign In&nbsp;</a><br>
+                                        <br>
+                                        Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"></a><a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 License</a><a href="http://creativecommons.org/licenses/by/3.0/" target="_blank"> <img src="images/CCBY80x15.png" width="80" height="15" border="0" align="absmiddle"></a><br>
+                                        OER Africa is an initiative of the <a href="http://www.saide.org.za/" target="_blank">South African Institute for Distance Education (<font style="font-style:italic;">Saide</font>) </a><br>
+                                        <br>
+                                    </div></td>
+                            </tr>
+                            </tbody></table>
+                    </td>
+                </tr>
+                </tbody></table>
+            <div class="cleared"></div>
+        </div>
+            </div>
+		</footer>
+		
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<!-- include Select2 plugin -->
+		<script src="js/select2.js"></script>
+		
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				function format(state) {
+					if (!state.id) return state.text; // optgroup
+					return "<img class='flag' alt='flag' src='style/images/flag_" + state.id.toLowerCase() + ".jpg'/>" + state.text;
+				}
+				$("#font-selector").select2({
+					minimumResultsForSearch:100
+				})
+				$("#lang-selector").select2({
+					minimumResultsForSearch:100,
+					dropdownCssClass:"flag",
+					formatResult: format,
+					formatSelection: format
+				})
+				
+				$('#paneltrigger').click(function(event){
+					event.preventDefault();
+					$(this).prev().prev().slideToggle("slow");
+				});
+				
+				$("#resizefonts").slider({
+					orientation: "horizontal",
+					range: "min",
+					max:29,
+					min:9,
+					value:14,
+					slide:refreshFontSize,
+					change:refreshFontSize
+				});
+				$( "#resizefonts_amount" ).text( $( "#resizefonts" ).slider( "value" )+"px" );
+				
+				$("#linespacing").slider({
+					orientation: "horizontal",
+					range: "min",
+					max:3.1,
+					min:0.9,
+					value:1,
+					step:0.1,
+					slide:refreshLinespacing,
+					change:refreshLinespacing
+				});
+				$( "#linespacing_amount" ).text( $( "#linespacing" ).slider( "value" )+"px" );
+				
+				$('.filter_parent').each(function() {
+					if($(this).hasClass("opened")) $(this).next().css("display","block");
+				});
+				$('.filter_parent').click(function(event){
+					event.preventDefault();
+					$(this).toggleClass("opened");
+					$(this).next().slideToggle("slow");
+				});
+				
+				 var availableTags = [
+					"ActionScript",
+					"AppleScript",
+					"Asp",
+					"BASIC",
+					"C",
+					"C++",
+					"Clojure",
+					"COBOL",
+					"ColdFusion",
+					"Erlang",
+					"Fortran",
+					"Groovy",
+					"Haskell",
+					"Java",
+					"JavaScript",
+					"Lisp",
+					"Perl",
+					"PHP",
+					"Python",
+					"Ruby",
+					"Scala",
+					"Scheme"
+				];
+				$( "#mainsearch" ).autocomplete({
+					source: availableTags
+				});
+				
+			});
+			function refreshFontSize() {
+				var resizefonts = $( "#resizefonts" ).slider( "value" );
+				$( "#resizefonts_amount" ).text(resizefonts+"px");
+				//console.log(resizefonts);
+			}
+			function refreshLinespacing() {
+				var linespacing = $( "#linespacing" ).slider( "value" );
+				$( "#linespacing_amount" ).text(linespacing+"px");
+				//console.log(resizefonts);
+			}
+		</script>
+		
+	</body>
+
+</html>

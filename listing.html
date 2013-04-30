@@ -14,21 +14,8 @@
 		<![endif]-->
 		
 		<link rel="stylesheet" href="style/reset.css" />
-		
-		<!-- more css -->
-		<!--<link rel="stylesheet" href="style/select2.css" />-->
-		<link rel="stylesheet" href="style/jMenu.jquery.css" />
-		<link rel="stylesheet" href="style/layerslider.css" />
-		<link rel="stylesheet" href="style/jquery.jscrollpane.css" />
-		
 		<link rel="stylesheet" href="style/style.css" />
-		<!--[if !IE 7]>
-			<style type="text/css">
-				#wrap {display:table;height:100%}
-			</style>
-		<![endif]-->
-		<script src="js/modernizr-1.7.min.js"></script>
-        
+
         
         <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.1/build/yahoo-dom-event/yahoo-dom-event.js&2.8.1/build/container/container_core-min.js&2.8.1/build/datasource/datasource-min.js&2.8.1/build/element/element-min.js&2.8.1/build/paginator/paginator-min.js&2.8.1/build/datatable/datatable-min.js&2.8.1/build/json/json-min.js&2.8.1/build/selector/selector-min.js&2.8.1/build/layout/layout-min.js"></script>
         
@@ -61,7 +48,7 @@
         
 	</head>
 	
-	<body class="innerpage listingpage"  onload="searchGOER()">
+	<body class="innerpage listingpage" >
 		<section id="wrap">
 
 			<section id="main">
@@ -298,7 +285,7 @@
                               if (!state.id) return state.text; // optgroup
                               return "<img class='flag' alt='flag' src='style/images/flag_" + state.id.toLowerCase() + ".jpg'/>" + state.text;
                               }
-                              jQuery("#lang-selector").select2({
+                              /*jQuery("#lang-selector").select2({
                                                           minimumResultsForSearch:100,
                                                           formatResult: format,
                                                           formatSelection: format
@@ -308,27 +295,27 @@
                                                      event.preventDefault()
                                                      $("div.moduletable_extendedsearch").slideToggle("slow");
                                                      });
-                              jQuery('input:radio').screwDefaultButtons({
+                              /*jQuery("input:radio").screwDefaultButtons({
                                                                    image: 'url("style/images/radio.png")',
                                                                    width: 12,
                                                                    height: 14
-                                                                   });
+                                                                   });*/
                               
-                              jQuery(".selectline select").select2({
+                              /*jQuery(".selectline select").select2({
                                                               minimumResultsForSearch:100,
                                                               dropdownCssClass:"simple"
                                                               })
                               
                               jQuery("#jMenu").jMenu();
                               
-                              jQuery('#layerslider').layerSlider({
+                             /* jQuery('#layerslider').layerSlider({
                                                             navPrevNext : false,
                                                             navStartStop : false,
                                                             skin : 'lightskin',
                                                             skinsPath : 'style/skins/'
-                                                            });
+                                                            });*/
                               
-                              jQuery('.is_slider').each(function() {
+                              /*jQuery('.is_slider').each(function() {
                                                    var $navWrap = $('<div class="slider-navigation clearfix"></div>');
                                                    var $navPrev = $('<a href="#" class="slider-prev">Prev</a>');
                                                    $navWrap.append($navPrev);
@@ -384,7 +371,7 @@
                                                               formatSelection: setface
                                                               })
                               
-                              jQuery(".hasscroll").jScrollPane();
+                              jQuery(".hasscroll").jScrollPane();*/
                               
                               });
            

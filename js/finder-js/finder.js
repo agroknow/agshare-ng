@@ -392,31 +392,52 @@ function parseQueryString(initUpdate){
     //var spq = $F('context').split('context:');
     var plainText = spq[0];
     var clauses = [];
+    
+    
+    var selectedProviders;
+    
+    if(typeof customizeFinder == 'function')
+    {
+        var customParams = customizeFinder();
+        if(customParams.selectedProviders) selectedProviders = customParams.selectedProviders;
+        
+    }
+    
     if(!plainText.blank()){
         clauses.push({language:'VSQL',expression:plainText});
         // add the below to github
         var lrt = getUrlVars()["lrt"];
         var key = getUrlVars()["keyword"];
         var context = getUrlVars()["context"];
+        var urlSelectedProviders = getUrlVars()["providers"];
+        
         if (lrt) {
-            var lrt1 = lrt.split('%20');
-            if (lrt1[1]) clauses.push({language:'anyOf',expression:'lrt:' + lrt1[0] + ' ' + lrt1[1]});
-            else clauses.push({language:'anyOf',expression:'lrt:' + lrt1});
+            lrt = lrt.replace("#","").replace("%20", " ");
+            clauses.push({language:'anyOf',expression:'lrt:'+ lrt});
         }
         if (key) {
+            key = key.replace("#","").replace("%20", " ");
             clauses.push({language:'anyOf',expression:'keyword:' + key});
         }
         if (context) {
-            var cnt = context.split('%20');
-            if (cnt[1]) clauses.push({language:'anyOf',expression:'lrt:' + cnt[0] + ' ' + cnt[1]});
-            else clauses.push({language:'anyOf',expression:'context:' + cnt});
-            clauses.push({language:'anyOf',expression:'context:' + cnt});
+            context = context.replace("#","").replace("%20", " ");
+            clauses.push({language:'anyOf',expression:'context:' + context});
         }
+        if (urlSelectedProviders){
+            urlSelectedProviders = urlSelectedProviders.replace("#","").replace("%20", " ");
+            clauses.push({language:'anyOf',expression:'provider:'+urlSelectedProviders});
+        }
+        
+        if (!urlSelectedProviders && selectedProviders){
+            clauses.push({language:'anyOf',expression:'provider:'+selectedProviders});
+        }        //clauses.push({language:'anyOf',expression:'keyword:' + key});
+        //clauses.push({language:'anyOf',expression:'lrt:image'});
         // add the below to code @ github. It is to limit the results only for OE collection //
-        clauses.push({language:'anyOf',expression:'provider:greenoer,oerafrica,ruforum'});
-        //clauses.push({language:'anyOf',expression:    'provider:oerafrica'});
-        //clauses.push({language:'anyOf',expression:'context:pre-school'});
+        
     }
+    
+    
+    
     if(spq.length > 1){
         var keyword = spq[1];
         clauses.push({language:'anyOf',expression:'keyword:' + keyword});
@@ -641,7 +662,6 @@ new Ajax.JSONRequest(SERVICE_URL, {
                       $('search_results').insert(Jaml.render('result',item));
                       
                     
-                      expand();
                       
                       // alert(item.metaMetadataId);
                       iter++;
@@ -745,7 +765,8 @@ new Ajax.JSONRequest(SERVICE_URL, {
                                       });
                     
                     
-                    
+                    //bind and triggers the function for sliding in facets!
+                    facetSlide();
                     
                     selectedFacets.each(function(item,index){
                                         $(item.id).addClassName('facet-selected');
@@ -1027,26 +1048,24 @@ new Ajax.JSONRequest(SERVICE_URL, {
  }
  }
  
- 
- function expand(){
- 
- jQuery(document).ready(function() {
-                        
-                        jQuery('.metacontent').hide();
-                        jQuery('.heading').click(function()
-     // jQuery('#'+id).click(function()
-     {   
-     jQuery(this).next('.metacontent').slideToggle(500);
-     //  jQuery(this).next("#"+id).slideToggle(500);
-     exit();
-     });
-                        
-                        
-                        });
- 
- }
- 
- 
+                     function facetSlide(){
+                     
+                     jQuery(document).ready(function(){
+                                            
+                                            jQuery('.filter_parent').each(function() {
+                                                                          if(jQuery(this).hasClass("opened")) jQuery(this).next().css("display","block");
+                                                                          });
+                                            jQuery('.filter_parent').click(function(event){
+                                                                           event.preventDefault();
+                                                                           jQuery(this).toggleClass("opened");
+                                                                           jQuery(this).next().slideToggle("slow");
+                                                                           });
+                                            exit();
+                                            
+                                            });
+                     }
+                     
+  
  
  
  function updatePaginator(NR_RESULTS){

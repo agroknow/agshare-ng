@@ -348,7 +348,7 @@ div.twocols > *:first-child {
     
 }
 .filter_parent:hover {
-	background-color:#073646;
+	/*background-color:#073646;*/
 }
 .filter_parent.opened {
     font-weight:bold;
@@ -378,9 +378,10 @@ div.twocols > *:first-child {
 }
 
 .filter_child a.facet-selected {
-    /*background:#0b4356 url(images/filter_active.png) left center no-repeat;*/
+    background:#82a53d;
     font-weight:bold;
     color:#c26031;
+    border-right:dotted ;
 }
 
 .filter_child span {

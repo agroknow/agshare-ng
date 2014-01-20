@@ -921,7 +921,7 @@ new Ajax.JSONRequest(SERVICE_URL, {
   span({cls:'bold'},'Keywords: '),
   Jaml.render('keyword',data.keywords)
   ), br(),
-  a({href:"http://83.212.96.169:8080/repository2/services/oai?verb=GetRecord&metadataPrefix=oai_lom&identifier="+data.metaMetadataId, title: "View all meta", target: '_blank'},"View all meta"), br()
+  a({href:"http://54.228.180.124:8080/repository2/services/oai?verb=GetRecord&metadataPrefix=oai_lom&identifier="+data.metaMetadataId, title: "View all meta", target: '_blank'},"View all meta"), br()
   
   )
   )
